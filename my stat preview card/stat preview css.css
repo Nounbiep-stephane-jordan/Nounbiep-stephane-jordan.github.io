@@ -1,0 +1,75 @@
+span{
+    color: blueviolet;
+}
+
+#main-text{
+    color: white;
+}
+
+@font-face{
+    font-family: Inter;
+    src : url("https://fonts.google.com/specimen/Inter");
+}
+
+body{
+    background-color: hsl(233, 47%, 7%);
+    color: white;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%;
+    font-family: Inter;
+}
+
+#main-p{
+   color: hsla(0, 0%, 100%, 0.75);
+}
+p{
+    color: hsla(0, 0%, 100%, 0.6)
+    ;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+ p span{
+     color: white;
+     font-weight: 900;
+     font-size: 20px;
+ }
+
+#all{
+    display: flex;
+    justify-content: space-between;
+}
+
+#right{
+    /* background-image: url("img/image-header-desktop.jpg"); */
+    height: 350px;
+    width: 500px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 0 10px 10px 0;
+}
+#card{
+    max-width: 70%;
+    height: 350px;
+    background-color:  hsl(244, 38%, 16%);
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+}
+
+#left{
+    width: 35%;
+    margin: auto;
+}
