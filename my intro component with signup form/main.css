@@ -1,0 +1,246 @@
+@font-face {
+    font-family: Poppins;
+    src: url(https://fonts.google.com/specimen/Poppins);
+}
+
+body ,html{
+    box-sizing: border-box;
+    margin: 0;
+    height: 100%;
+    font-family: Poppings;
+    background-image: url(images/bg-intro-desktop.png);
+    width: 1440px;
+    background-color: var(--Red-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+}
+
+:root{
+    /* primary colors */
+--Red-color: hsl(0, 100%, 74%);
+--Green-color: hsl(154, 59%, 51%);
+/* accent */
+--Blue-color: hsl(248, 32%, 49%);
+/* nuetral */
+--DarkBlue-color: hsl(249, 10%, 26%); 
+--GrayishBlue-color: hsl(246, 25%, 77%);
+--fonts-Font-size: 16px;
+--white-color:white;
+}
+
+h1{
+    color: var(--white-color);
+    font-weight: 900px;
+    font-size: 3.3vw;
+}
+
+div#top{
+    background-color: var(--Blue-color);
+    box-shadow: 0 5px  #ee5e5e;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+div#top span{
+    color: var(--GrayishBlue-color);
+}
+
+form p {
+    color:var(--GrayishBlue-color);
+}
+
+  form{
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+    box-shadow: 0 5px #ee5e5e;
+      border-radius: 5px;
+  }
+
+input{
+    padding: 10px;
+    border-radius: 5px;
+    margin: 15px 25px 5px 25px;
+    color: var(--DarkBlue-color);
+    border: 1px solid var(--GrayishBlue-color);
+}
+
+input:first-child{
+    margin-top: 25px;
+}
+
+input[type="submit"]{
+    border: none;
+    background-color: var(--Green-color);
+ display: flex;
+ justify-content: center;
+ color: white;
+ font-weight: bolder;
+ text-transform: uppercase;
+ margin: 5px 25px 5px 25px;
+ padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 5px  var(--Green-color);
+}
+
+input[type="submit"]:hover{
+    opacity: 0.6;
+}
+
+form p{
+ margin: 5px 25px 5px 25px;
+display: flex;
+justify-content: center;
+padding-bottom: 30px;
+font-size: 10.5px;
+}
+
+a{
+color: var(--Red-color);
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+main{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#section-1{
+    width: 450px;
+    text-align: left;
+}
+
+#section-2{
+    width: 35%;
+}
+
+@media screen and (max-width:375px) {
+    body ,html{
+        box-sizing: border-box;
+        margin: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        font-family: Poppings;
+        background-image: url(images/bg-intro-desktop.png);
+        width: 1440px;
+        background-color: var(--Red-color);
+        color: var(--white-color);
+    }
+   
+    
+h1{
+    color: var(--white-color);
+    font-weight: 900px;
+    font-size: 2pc;
+    margin-top: 300px;
+}
+
+div#top{
+    background-color: var(--Blue-color);
+    box-shadow: 0 5px  #ee5e5e;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 10px;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+form{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  box-shadow: 0 5px #ee5e5e;
+    border-radius: 5px;
+}
+
+main{
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+
+#section-1{
+    width: 45%;
+    text-align: center;
+}
+
+
+input{
+    padding: 10px;
+    border-radius: 5px;
+    margin: 15px 25px 5px 25px;
+    color: var(--DarkBlue-color);
+    border: 1px solid var(--GrayishBlue-color);
+}
+
+input:first-child{
+    margin-top: 25px;
+}
+
+
+input[type="submit"]{
+    border: none;
+    background-color: var(--Green-color);
+ display: flex;
+ justify-content: center;
+ color: white;
+ font-weight: bolder;
+ text-transform: uppercase;
+ margin: 5px 25px 5px 25px;
+ padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 5px  var(--Green-color);
+}
+
+input[type="submit"]:hover{
+    opacity: 0.6;
+}
+
+form p{
+ margin: 5px 35px 5px 35px;
+padding-bottom: 30px;
+font-size: 10.5px;
+color:var(--GrayishBlue-color);
+
+}
+
+a{
+color: var(--Red-color);
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+
+div#top span{
+    color: var(--GrayishBlue-color);
+    display: block;
+}
+ 
+
+#section-2{
+    width: 40%;
+    text-align: center;
+}
+
+}
+
