@@ -1,0 +1,288 @@
+/* sfter structuring now lets write the main css style */
+
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* lets style the nav */
+
+nav{
+    padding: 0;
+    margin: 0;
+    display: flex;
+justify-content: flex-start;
+background-color: black;
+padding: 15px;
+}
+
+li{
+
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    padding:10px;
+    color: white;
+
+}
+
+.active{
+    background-color: lightblue;
+}
+
+/* lets add a hover effect */
+
+a:hover{
+    background-color: white;
+    color: black;
+}
+/* note never forget to add link to stylesheet */
+
+/* adding the image of the header */
+
+header{
+    background-image: url("images/sailboat.jpg");
+    /* always precise the height in px */
+  height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* styling ssection 1 */
+#section-1{
+    text-align: center;
+}
+#images{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* making the images to have a round border */
+
+#img-self img{
+    height: auto;
+    max-width: 100%; /* makes the image responsive*/
+    border-radius: 100%;
+}
+
+/* adding  hover to images */
+#img-self img:hover{
+    opacity: 0.5;
+}
+
+/* styling section 2 */
+#section-2{
+    background-color: rgb(36, 34, 34);
+    color: white;
+    display: flex;
+    padding: 40px 0 40px 0;
+}
+
+#card{
+    max-width: 25%;  
+    margin: 0 15px 0 0;
+    height: 100%;
+    background-color: white;
+
+}
+
+#card img{
+    max-width: 100%;
+    height: auto;
+}
+
+#img-description{
+    color: black;
+    text-align: left;
+  padding: 0px 20px;
+}
+
+#text{
+    width: 25%;
+    padding: 9px;
+}
+
+/* the above code has been modified and slightly different fromm previuos video look closely the background-color is in the card  */
+
+/* styling section3 */
+
+#section-3{
+    text-align: center;
+}
+
+#all-cards{
+    display: flex;
+    justify-content: center;
+}
+
+#description{
+    background-color: black;
+    padding: 20px;
+    color: white;
+}
+
+#description-1{
+    background-color: lightgray;
+    padding: 20px;
+    color: black;
+}
+
+ 
+/* id is stroner than class */
+
+.card{
+    width: 50%;
+    margin: 15px;
+    border: 1px solid;
+}
+
+.card p {
+     border-bottom: 1px solid lightgray;
+     padding-bottom: 10px;
+ }
+
+ button{
+     border: none;
+     padding: 10px 20px;
+     background-color: aquamarine;
+     margin: 10px;
+ }
+
+ #buttton-container{
+     background-color: lightgray;
+     padding-top: 10px;
+ }
+
+ .card:hover{
+     box-shadow: 5px 5px 5px lightgray;
+ }
+
+ /* styling section3 */
+
+ #section-4{
+     background-color: lightgray;
+     display: flex;
+     justify-content: space-between;
+ }
+
+ 
+ #text-sec4 h1{
+     color: black;
+     border-bottom: 5px solid lightseagreen;
+     text-transform: uppercase;
+     align-items: center;
+ }
+ #text-sec4 h2{
+     text-transform: uppercase;
+     font-weight: 100;
+ }
+ #text-sec4 {
+     margin: 30px;
+ }
+ form{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+    margin: 30px;
+    box-shadow: 5px  white;
+}
+
+
+input{
+    padding: 5px;
+    margin: 10px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+   }
+   label{
+    margin: 10px;
+   }
+
+   label[for="like"]{
+       margin: 0;
+   }
+   #last{
+    display: inline;
+       }
+
+       
+   #last button{
+    border: none;
+ padding: 10px 20px;
+ background-color: black;
+ margin: 10px;
+ color: white;
+}
+
+/* happy codiing with you see you soon */
+
+
+/* lets now make the website responsive */
+
+@media screen and (max-width:500px) {
+    #images{
+        display: block;
+    }
+
+    
+#img-self img{
+    height: auto;
+    max-width: 35%; /* makes the image responsive*/
+    border-radius: 100%;
+    }
+
+    
+#section-2{
+    display: block;
+    }
+    
+    #img-description{
+    width: 90%;
+    text-align: center;
+    margin: 0;
+    }
+    
+    
+    #card{
+    max-width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+    border: 1px solid;
+    }
+    #text{
+    width: 100%;
+    }
+#all-cards{
+    display: block;
+}
+
+.card{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#description{
+    max-width: 100%;
+}
+
+#section-4{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+}
+
+/* end of project thanks for following till the end hope you learned something */
