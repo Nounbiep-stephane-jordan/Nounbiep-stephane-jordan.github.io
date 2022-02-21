@@ -143,7 +143,7 @@ padding: 7% 15%;
     padding: 10px;
 }
 
-@media screen and (max-width:932px) {
+@media screen and (max-width:956px) {
     .rotate{
         transform: rotate(0);
         position: static;
