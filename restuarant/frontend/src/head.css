@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+
+nav{
+    margin: 10px 0;
+    height: 30px;
+    display:flex;
+    justify-content: space-around;
+}
+
+a{
+    text-decoration:none;
+    padding: 10px 10px;
+    color: #000;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+a.active{
+    color: rgb(248, 44, 44);
+}
+
+header{
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav-black{
+    transition: all .5s;
+    animation: color 1s linear forwards;
+}
+
+@keyframes color {
+    from{background: transparent;}
+    to{background-color: rgb(17, 15, 15,0.8);}
+}
+
+.a-black{
+    color: white;
+}
