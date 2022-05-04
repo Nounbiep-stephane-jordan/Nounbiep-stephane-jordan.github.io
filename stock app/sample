@@ -1,0 +1,59 @@
+<%- include("partials/head") -%>
+
+
+
+
+<section id="products" >
+  <h1 id="product-h1">Supplier</h1>
+
+  <form action="/addseller" method="post">
+  <table id="customers" class="row">
+  <tr class="table-head" >
+    <th class="col-lg-4">Name</th>
+    <th class="col-lg-4">Tel</th>
+    <th class="col-lg-4">Good</th>
+    <th class="col-lg-4">Delete</th>
+  </tr>
+
+  <tr class="table-heading table-input" >
+    <td class="col-lg-4">  <input type="text" name="name" required/></td>
+    <td class="col-lg-4">    <input type="text" name="telephone" required/></td>
+    <td class="col-lg-4">     <input type="text" name="products" required/></td>
+    <td class="col-lg-4">   </td>
+  </tr>
+ </table>
+
+<table id="customers" class="second row">
+  <tbody id="table-body">
+
+    <% for(i=0;i<allsupplier.length;i++) { %>
+
+      <tr  class="table-data col-lg-12 col-12">
+     <td class="col-lg-3 col-12"><%=allsupplier[i].name %></td>
+     <td class="col-lg-3 col-12"><%=allsupplier[i].telephone %></td>
+     <td class="col-lg-3 col-12"><%=allsupplier[i].products %></td>
+     <td class="col-lg-3 col-12">
+    <input   type="submit" value="<%= allsupplier[i].name %>" name="name"   form="delete" readonly/>
+
+       <i id="deleteicon" class="fa-solid fa-trash-can"></i>
+      </td>
+    </tr>
+
+
+     <%  } %>
+
+  </tbody>
+</table>
+
+<button id="add" class="btn" id="product-btn" type="submit">submit</button>
+
+  </form>
+
+
+  <form action="/removeseller" method="post" id="delete">
+     </form>
+
+</section>
+
+
+<%- include("partials/foot") -%>

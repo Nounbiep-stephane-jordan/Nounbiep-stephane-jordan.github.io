@@ -1,0 +1,91 @@
+
+<%- include("partials/head") -%>
+<section class="main-interface">
+ 
+<div class="top">   </div> <div class="store-icon"><i class="fa-solid fa-shop fa-2x"></i></div> </div>
+
+<div class="stocks">
+  <div class="current-stocks">
+    <span>Current stock</span>
+    <p class="value"><%= stock %> </p>
+  </div>
+   <div class="current-stocks">
+    <span>Stock value</span>
+    <p class="value">300 <span>FCFA</span></p>
+  </div>
+</div>
+
+<div class="dashboard row">
+  <h1>dashboard</h1>
+  
+<div class="col-lg-4 ">
+ <div class="goods box">
+ <a href="/product">
+       <i class="fa-solid fa-box-open fa-2x"></i>
+    </a> 
+    <p>Goods</p>
+  </div>
+      <div class="suppliers box">
+       <a href="/supplier">
+   <i class="fa-solid fa-dolly fa-2x"></i>
+    </a>  
+    <p>suppliers</p>
+  </div>
+</div>
+
+<div class="col-lg-4">
+  <div class="incoming goods box">
+         <a href="/incomming">
+ <i class="fa-solid fa-cubes fa-2x"></i>
+     </a>  
+     <p> incoming goods</p>
+  </div>
+    <div class="customers box">
+             <a href="/customer">
+      <i class="fa-solid fa-user-tie fa-2x"></i>
+           </a>  
+    <p>customer</p>
+  </div>
+</div>
+
+
+  
+  <div class="col-lg-4 ">
+  <div class="outgoing goods box">
+               <a href="/outgoing">
+    <i class="fa-solid fa-boxes-packing fa-2x"></i>
+    </a>
+    <p>outgoing goods</p>
+  </div>
+   <div class="deptors box">
+                <a href="/deptor">
+    <i class="fa-solid fa-coins fa-2x"></i>
+    </a>
+    <p>deptors</p>
+  </div>
+  </div>
+
+
+</div>
+
+<div class="report-expenses">
+  <h1>reports and expenses</h1>
+  <div class="inventory box-2">
+               <a href="/report">
+    <p> <i class="fa-solid fa-file fa-2x"></i></p>
+    </a>
+    <p>inventory reports</p>
+  </div>
+
+<div class="expenses box-2">
+             <a href="/expense">
+   <p><i class="fa-solid fa-wallet fa-2x"></i></p>
+   </a>
+     <p> <%= expense %> <span>FCFA</span> </p>
+</div>
+
+</div>
+
+</section>
+
+<%- include("partials/foot") -%>

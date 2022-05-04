@@ -1,0 +1,61 @@
+<%- include("partials/head") -%>
+
+
+
+
+<section id="products" >
+  <h1 id="product-h1">Supplier</h1>
+  <i class="fa-solid fa-ellipsis-vertical menu" onclick="hide()"></i>
+  <form action="/addseller" method="post">
+  <table id="customers" class="first">
+  <tr class="table-head" >
+    <th >Name</th>
+    <th >Tel</th>
+    <th >Good</th>
+  </tr>
+
+  <tr class="table-heading table-input " >
+    <td >  <input type="text" name="name" required/></td>
+    <td>    <input type="text" name="telephone" required/></td>
+    <td >     <input type="text" name="products" required/></td>
+
+  </tr>
+ </table>
+
+<table id="customers" class="second supplier-sec">
+  <tbody id="table-body">
+
+    <% for(i=0;i<allsupplier.length;i++) { %>
+
+      <tr  class="table-data col-lg-12 col-12 supplierdata">
+     <td ><%=allsupplier[i].name %></td>
+     <td ><%=allsupplier[i].telephone %></td>
+     <td ><%=allsupplier[i].products %></td>
+    </tr>
+
+    <tr id="white">
+      <td class="sub">
+     <input   type="submit" value="<%= allsupplier[i].name %>" name="name"   form="delete" readonly/>
+
+        <i id="deleteicon" class="fa-solid fa-trash-can"></i>
+       </td>
+    </tr>
+
+
+     <%  } %>
+
+  </tbody>
+</table>
+
+<button id="add" class="btn" id="product-btn" type="submit">submit</button>
+
+  </form>
+
+
+  <form action="/removeseller" method="post" id="delete">
+     </form>
+
+</section>
+
+
+<%- include("partials/foot") -%>

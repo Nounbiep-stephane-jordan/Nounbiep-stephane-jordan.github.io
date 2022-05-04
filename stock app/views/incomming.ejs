@@ -1,0 +1,70 @@
+
+<%- include("partials/head") -%>
+
+
+<section >
+  <h1 id="product-h1">Incomming</h1>
+  <i class="fa-solid fa-ellipsis-vertical menu" onclick="hide()"></i>
+
+  <form action="/addincomming" method="post">
+    <table id="customers" class="second first">
+    <tr  class="table-head head-incomming">
+      <th>Good Name</th>
+      <th>date</th>
+      <th>supplier</th>
+      <th>Amount</th>
+      <th>Price</th>
+    </tr>
+
+
+
+    <tr  class="table-heading table-input " >
+      <td>  <input class="inputin" type="text" name="goodname" required/></td>
+      <td>    <input class="inputin" type="date" name="date" required/></td>
+      <td>     <input class="inputin" type="text" name="supplier" required/></td>
+      <td>     <input class="inputin" type="text" name="amount" required/></td>
+      <td >     <input class="inputin" type="text" name="price" required/></td>
+    </tr >
+
+
+   </table>
+<table id="customers" class="second ">
+  <tbody  id="table-body">
+
+    <% for(i=0;i<allincomming.length;i++) { %>
+
+      <tr class="table-data col-lg-12 col-12 supplierdata">
+     <td><%= allincomming[i].goodname %></td>
+     <td><%= allincomming[i].date %></td>
+     <td><%= allincomming[i].supplier %></td>
+     <td><%= allincomming[i].amount %></td>
+     <td><%= allincomming[i].price%></td>
+    </tr>
+
+<tr id="white" >
+  <td class="sub">
+ <input   type="submit" value="<%= allincomming[i].goodname%>" name="goodname"   form="delete" readonly/>
+    <i id="deleteicon" class="fa-solid fa-trash-can"></i>
+   </td>
+</tr>
+
+     <%  } %>
+
+  </tbody>
+</table>
+
+
+     <button id="add" class="btn" id="product-btn" type="submit">submit</button>
+
+    </form>
+
+
+    <form action="/removeincomming" method="post" id="delete">
+       </form>
+
+</section>
+
+
+
+
+<%- include("partials/foot") -%>

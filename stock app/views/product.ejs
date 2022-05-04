@@ -1,0 +1,82 @@
+<%- include("partials/head") -%>
+
+
+
+
+<section id="products" >
+  <h1 id="product-h1">Products</h1>
+<i class="fa-solid fa-ellipsis-vertical menu" onclick="hide()"></i>
+   <form action="/addproduct" method="post">
+  <table id="customers" class="row first">
+
+
+ <tr class="table-head">
+    <th class="col-lg-4" >Name</th>
+    <th  class="col-lg-4">Price</th>
+    <th class="col-lg-4"   >Qty</th>
+    <th   class="col-lg-4">status</th>
+  </tr>
+
+  <tr  class="table-heading table-input" >
+    <td class="col-lg-3">  <input type="text" name="name" required/></td>
+    <td class="col-lg-3">    <input type="text" name="price" required/></td>
+    <td class="col-lg-3">     <input type="text" name="quantity" required/></td>
+    <td class="col-lg-3">     <input type="text" value="payed" name="status" readonly/> </td>
+  </tr>
+
+
+ </table>
+
+<table id="customers" class="second row">
+ <tbody id="table-body">
+<% for(i=0;i<allproducts.length;i++) { %>
+<% if(allproducts[i].status==="payed") { %>
+ <% {console.log(allproducts[i].status)} %>
+
+
+    <tr  class="table-data col-lg-12 col-12">
+     <td class="col-lg-3 col-12"><%= allproducts[i].name %></td>
+     <td class="col-lg-3 col-12"><%= allproducts[i].price %></td>
+     <td class="col-lg-3 col-12"><%= allproducts[i].quantity %></td>
+     <td class="col-lg-3 col-12"><%= allproducts[i].status %></td>
+    </tr>
+
+<tr id="white">
+  <td class="col-lg-3 col-12 sub">
+    <input     type="submit" value="<%= allproducts[i].name%>" name="name"   form="delete" readonly/>
+       <i   id="deleteicon" class="fa-solid fa-trash-can"></i>
+
+      </td>
+      </tr>
+
+
+
+
+<%}%>
+
+
+ <%  } %>
+
+ </tbody>
+</table>
+
+
+
+   <button id="add" class="btn" id="product-btn" type="submit">submit</button>
+
+  </form>
+
+
+  <form action="/removeproduct" method="post" id="delete">
+     </form>
+
+</section>
+
+
+<script>
+
+
+</script>
+
+
+<%- include("partials/foot") -%>

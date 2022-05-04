@@ -1,0 +1,311 @@
+body {
+  font-family: "Lato", sans-serif;
+  color:black;
+  background-color: #E4E9FD;
+  background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+  min-height: 1000px;
+
+
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+ display:flex;
+ align-items:center;
+ justify-content: space-between;
+    background-color: white;
+ flex-direction:column;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  transition: all .2s ease-in-out;
+
+}
+
+.sidebar a:hover {
+  color: red;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+
+
+.logo img{
+
+  border-radius: 100%;
+}
+
+
+.log-form{
+      width: 40%;
+      position: relative;
+    margin: auto;
+    padding: 50px;
+    text-align: center;
+    background-color: white;
+}
+
+ .log-form input[type]{
+border-radius: 28px;
+}
+
+ .inner-form{
+  text-align: left !important;
+}
+
+
+.form-user{
+  color: #A683E3;
+}
+
+.btn{
+  color: black;
+    background-color: #E4E9FD;
+  background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%)
+}
+
+
+.eye-slash{
+      position: absolute;
+    bottom: 156px;
+    right: 63px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+
+}
+
+
+.main-text{
+  font-family: "Tangerine";
+  font-size:5rem;
+  color: violet;
+}
+
+.main-sec{
+  text-align: center;
+}
+
+.addstore{
+  display:flex;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 20%;
+  align-items: center;
+ padding: 10px;
+ border-radius: 28px;
+}
+
+
+
+.store-icon-plus {
+  border-radius: 100%;
+  background-color: #A683E3;
+  color:  #E4E9FD;
+  padding: 10px;
+}
+
+.store-icon{
+   color:  #A683E3;
+  padding: 10px;
+ text-align: center;
+  margin: auto;
+}
+
+.store-icon i{
+  border-radius: 100%;
+}
+
+.store-input{
+  margin: 10px;
+  border:1px solid lightgray;
+ padding: 10px;
+ }
+
+ .store-input:focus{
+  outline: 1px solid violet;
+ }
+
+
+ .main-interface{
+  text-align: center;
+  margin: auto;
+  max-width: 500px;
+  }
+
+ .top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ .select-store{
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+ background-color: violet;
+ padding: 20px;
+ }
+
+ .stocks{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    max-width: 500px;
+  }
+
+
+ .fa-box-open{
+  color: blue;
+ }
+
+ .fa-wallet{
+  color: crimson;
+ }
+
+ .fa-coins{
+  color: #FFDF01;
+ }
+
+ .fa-dolly{
+  color: darkblue;
+ }
+
+ .fa-user-tie{
+  color: #3644E4;
+ }
+
+ .fa-file{
+  color:  #A4DE02;
+ }
+
+ .fa-cubes{
+  color: #A683E3 ;
+ }
+
+ .fa-boxes-packing{
+  color: #E11584;
+ }
+
+ .box{
+  background-color: white;
+padding: 5px 5px 3px 5px;
+text-align:  center;
+border-radius: 10px;
+margin: 5px;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+ }
+
+
+ .box-2{
+    background-color: white;
+padding: 10px;
+text-align:  left;
+border-radius: 10px;
+margin: 5px;
+display: flex;
+align-items: center;
+ }
+
+ .box-2 p{
+margin-left:10px;
+ }
+
+ .stocks{
+  background-color: #A683E3;
+ }
+
+ .current-stocks{
+  background-color: white;
+  padding: 20px;
+ }
+
+ .create-btn{
+  padding: 0;
+border: none;
+background: none;
+color: white;
+ }
+
+
+
+
+ #product-h1 {
+  text-align: center !important;
+font-family: "Tangerine";
+font-size: 4rem;
+color: goldenrod;
+ }
+
+
+  #customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+ margin: auto;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color:  #A683E3;}
+
+#customers tr:nth-child(odd){background-color:   #E4E9FD;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: violet;
+  color: white;
+}

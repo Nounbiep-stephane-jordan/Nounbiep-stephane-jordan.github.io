@@ -1,0 +1,64 @@
+<%- include("partials/head") -%>
+
+
+
+
+<section id="products" >
+  <h1 id="product-h1">Reports</h1>
+ 
+  <i class="fa-solid fa-ellipsis-vertical menu" onclick="filter()"></i>
+
+
+  <table id="customers" class="report">
+ <tbody class="report">
+   <tr>
+     <th>Name</th>
+     <th>Price</th>
+     <th>Qty</th>
+     <th>status</th>
+     <th>Sold</th>
+
+   </tr>
+ <% {console.log(allproducts)} %>
+ <% for(i=0;i<allproducts.length;i++) { %>
+ <% if(allproducts[i].status==="payed") { %>
+
+   <tr>
+     <td><%= allproducts[i].goodname %></td>
+     <td><%= allproducts[i].price %></td>
+     <td><%= allproducts[i].amount %></td>
+     <td><%= allproducts[i].status %></td>
+
+     <td> <i style="color: green;" class="fa-solid fa-circle-check fa-2x"></i></td>
+
+
+    </tr>
+
+
+
+ <%}%>
+
+
+  <%  } %>
+
+
+  <tr>
+
+  <td style="font-weight: bold;">PROFIT</td>
+  <% if(profit>0) { %>
+   <td style="background-color: green;color: white;"><%=profit%></td>
+  <% } else { %>
+    <td style="background-color: red;color: white;"><%=profit%></td>
+  <% } %>
+
+  </tr>
+
+ </tbody>
+ </table>
+
+
+
+</section>
+
+
+<%- include("partials/foot") -%>

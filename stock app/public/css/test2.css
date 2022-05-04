@@ -1,0 +1,13 @@
+body{
+  background: red;
+}
+
+
+tbody{
+  display: flex;
+}
+
+tbody tr{
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,51 @@
+
+<%- include("partials/head") -%>
+
+
+<section >
+  <h1 id="product-h1">Expense</h1>
+   <i class="fa-solid fa-ellipsis-vertical menu" onclick="filter()"></i>
+
+    <table id="customers">
+ <tbody class="report">
+   <tr>
+     <th>Good Name</th>
+     <th>date</th>
+     <th>Status</th>
+     <th>Amount</th>
+     <th>Price</th>
+
+   </tr>
+
+ <% for(i=0;i<allexpense.length;i++) { %>
+
+   <tr>
+  <td><%= allexpense[i].goodname %></td>
+  <td><%= allexpense[i].date %></td>
+  <td><%= allexpense[i].status%></td>
+  <td><%= allexpense[i].amount %></td>
+  <td><%= allexpense[i].price%></td>
+
+ </tr>
+
+
+  <%  } %>
+
+
+
+ <tr>
+     <td>TOTAL</td>
+     <td><%= total %></td>
+ </tr>
+ </tbody>
+   </table>
+
+
+
+
+</section>
+
+
+
+
+<%- include("partials/foot") -%>

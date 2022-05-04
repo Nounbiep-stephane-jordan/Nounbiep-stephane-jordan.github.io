@@ -1,0 +1,395 @@
+ #product-btn{
+  text-align:right;
+}
+
+#add{
+
+  position: absolute;
+  right: 150px;
+}
+
+
+.login-link{
+  font-size: .8rem;
+padding: 10px 0;
+color: gray;
+}
+
+.login-link a{
+  font-size: 1rem;
+color: blue;
+margin: 0 5px;
+text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+ .log-form button{
+  background-image: -webkit-linear-gradient(65deg, #E4E9FD  50%,#A683E3 50%)
+
+}
+
+
+.main-interface h1{
+	font-family: "Tangerine";
+	text-transform: capitalize;
+	    line-height: 2;
+    letter-spacing: 2px;
+    font-size: 3rem;
+    color: violet;
+    font-weight: bold;
+    color: #EE3CCA;
+    text-decoration: underline;
+}
+
+.main-interface p{
+	line-height: 1;
+	text-transform: capitalize;
+}
+
+.current-stocks span{
+	line-height: 1;
+    color: #D0FF00;
+    font-weight: bold;
+}
+
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 6px;
+}
+
+
+form{
+  position: relative;
+}
+
+
+/* .second{
+  display: flex;
+    justify-content: center;
+    align-items: center
+} */
+
+.thead{
+  display:flex;
+}
+
+#table-body tr{
+  display: flex;
+}
+
+.fa-trash-can{
+  color:#f73718;
+}
+
+.sub {
+      background: rebeccapurple;
+}
+
+.none{
+  display:none;
+}
+
+.menu{
+  position: relative;
+  right: 10px;
+}
+
+
+
+
+
+
+ @media screen and (max-width:500px){
+      body,html{
+height: 400px;
+  }
+
+
+.stocks{
+	background-color: white;
+}
+
+.main-sec h1{
+  font-size: 0.8rem;
+}
+
+.main-sec h1 span{
+  font-size: 2rem;
+}
+
+#addstore{
+    display: flex;
+    margin: auto;
+    max-width: 20%;
+    align-items: center;
+    padding: 10px;
+    border-radius: 28px;
+  justify-content: center;
+}
+
+
+.log-form{
+	    margin: auto;
+    width: 90%;
+}
+
+
+.eye-slash{
+	position: absolute;
+    bottom: 155px;
+    right: 63px;
+}
+
+.log-form h1{
+	    line-height: 2;
+}
+
+.log-form{
+	padding: 10px 50px 50px 50px;
+}
+
+
+.login-link{
+	    font-size: .6rem;
+    padding: 10px 0;
+    color: gray;
+}
+
+.login-link a{
+	font-size: 0.8rem;
+}
+
+.log-form button{
+  background-image: -webkit-linear-gradient(65deg, #E4E9FD  50%,#A683E3 50%)
+
+}
+
+
+.main-interface h1{
+	font-family: "Tangerine";
+	text-transform: capitalize;
+	    line-height: 2;
+    letter-spacing: 2px;
+    font-size: 3rem;
+    color: violet;
+    font-weight: bold;
+    color: #EE3CCA;
+    text-decoration: underline;
+}
+
+.main-interface p{
+	line-height: 1;
+	text-transform: capitalize;
+}
+
+
+
+.main-interface{
+	margin: 0px 10px;
+}
+
+
+.box{
+	padding: 20px 20px 10px;
+}
+
+.current-stocks span{
+	line-height: 1;
+    color: #D0FF00;
+    font-weight: bold;
+}
+
+
+
+.table-head{
+     display: flex;
+    flex-direction: column;
+    width: 20%;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+
+.table-input{
+   display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+tbody{
+  display: flex;
+justify-content: center;
+}
+
+
+#table-body{
+     display: flex;
+     flex-direction: column;
+}
+
+.table-data{
+  margin:10px 0px;
+}
+
+.table-data td{
+
+      border: 1px solid white;
+      width: 50%;
+}
+
+#add{
+  position: absolute;
+    right: 12px;
+}
+
+  #customers tr{background-color:  white;opacity: 1;}
+
+/* #customers tr:nth-child(even){background-color:  green;}
+
+#customers tr:nth-child(odd){background-color:   blue;} */
+
+#customers{
+  width: 80%;
+}
+
+.cust{
+  width: 26%;
+}
+
+.in-td{
+  width: 100%;
+  display: block;
+}
+
+#table-body tr{
+  display: block;
+}
+
+.menu{
+
+position: relative;
+left: 22rem;
+}
+
+
+.custs{
+  width:36%;
+}
+
+
+.head-incomming{
+ width:27%;
+}
+
+.secondtable{
+  margin:10px 0;
+}
+
+.deptor{
+  margin-bottom:50px !important;
+}
+
+.deptordata{
+  display: flex !important;
+}
+
+input[form="delete"]:hover{
+  background-color:red !important;
+  border:none;
+  color: white;
+  transition:0.5s;
+}
+
+.report tr td{
+ width: 100%;
+}
+
+.report{
+  display:block;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+
+}
+
+
+
+.supplierinput input,.supplierdata td{
+  width: 100%;
+}
+
+
+
+
+.customerinput td input{
+width: 100%;
+}
+
+
+.inputin{
+  width: 100%;
+}
+
+
+#white{
+  background-color: white !important;
+}
+
+
+input[form="delete"]:hover{
+  background-color:red !important;
+  border:none;
+  color: white;
+  transition:0.5s;
+}
+
+
+#sidebar{
+ display:flex !important;
+ justify-content:center !important;
+ align-items: center !important;
+}
+
+
+ .closebtn{
+   cursor: pointer;
+ }
+
+
+.error{
+
+ 
+    font-size: 3rem;
+    text-align: center;
+}

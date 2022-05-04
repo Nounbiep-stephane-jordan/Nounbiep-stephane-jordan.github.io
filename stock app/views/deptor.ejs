@@ -1,0 +1,64 @@
+<%- include("partials/head") -%>
+
+
+
+
+<section id="products" >
+  <h1 id="product-h1">Deptors</h1>
+  <i class="fa-solid fa-ellipsis-vertical menu" onclick="hide()"></i>
+
+  <form action="/adddeptor" method="post">
+  <table id="customers"class="first deptor">
+  <tr  class="table-head custs">
+    <th>Name</th>
+    <th>date</th>
+    <th>repayment</th>
+    <th>Amount</th>
+  </tr>
+
+  <tr  class="table-heading table-input ">
+    <td >  <input class="inputin" type="text" name="name" required/></td>
+    <td >    <input class="inputin"  type="date" name="datetaken" required/></td>
+    <td >     <input class="inputin" type="date" name="datetoclear" required/></td>
+    <td >     <input class="inputin" type="text" name="amounttaken" required/></td>
+  </tr>
+
+
+ </table>
+ <table id="customers" class="secondtable ">
+   <tbody  id="table-body">
+
+       <% for(i=0;i<alldeptors.length;i++) { %>
+       <% {console.log(alldeptors)} %>
+
+         <tr class="supplierdata deptordata">
+        <td><%=  alldeptors[i].name %></td>
+        <td><%=  alldeptors[i].datetaken %></td>
+        <td><%=  alldeptors[i].datetoclear %></td>
+        <td><%=  alldeptors[i].amounttaken %></td>
+       </tr>
+
+<tr id="white">
+  <td class="sub">
+ <input   type="submit" value="<%=  alldeptors[i].name%>" name="name"   form="delete" readonly/>
+    <i id="deleteicon" class="fa-solid fa-trash-can"></i>
+   </td>
+</tr>
+
+
+        <%  } %>
+
+   </tbody>
+ </table>
+   <button id="add" class="btn" id="product-btn" type="submit">submit</button>
+
+  </form>
+
+
+  <form action="/cleardept" method="post" id="delete">
+     </form>
+
+</section>
+
+
+<%- include("partials/foot") -%>

@@ -1,0 +1,35 @@
+
+
+
+<%- include("partials/head") -%>
+ 
+
+
+
+
+
+<form action="/auth/login" method="post" class="log-form">
+
+<h1>Log in</h1>
+
+<span><i class=" form-user  fa-solid fa-3x fa-circle-user"></i></span>
+
+ <div class="inner-form">
+     <div class="mb-3">
+  <label for="formGroupExampleInput" class="form-label">Name</label>
+  <input type="text" name="username" class="form-control" id="formGroupExampleInput" placeholder=" enter your name">
+</div>
+<div class="mb-3">
+  <label for="formGroupExampleInput2" class="form-label">Password</label>
+  <input type="password" name="password" class="form-control" id="password" placeholder="enter your password">
+  <i onclick="toggleVisibility()" class="fa-solid fa-eye-slash eye-slash"></i>
+ <p class="login-link">Don't have an account ? <a href="/register">register</a></p>
+</div>
+  <button type="submit" class="btn btn-primary" onclick="alertmessage()">Submit</button>
+ </div>
+</form>
+
+ 
+ 
+<%- include("partials/foot") -%>
+

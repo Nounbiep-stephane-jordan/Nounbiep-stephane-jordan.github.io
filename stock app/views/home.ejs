@@ -1,0 +1,34 @@
+
+<%- include("partials/head") -%>
+ 
+
+
+ 
+
+ <section class="main-sec"> 
+   
+<h1>Wellcome to  <span class="main-text">NJS store</span></h1>
+ <form action="/creatstore" method="post">
+    <div class="store-icon"><i class="fa-solid fa-shop fa-2x"></i></div>
+<div class="addstore" id="addstore">
+   <input type="text" name="name" placeholder="enter store name" class="store-input">
+  <div class="store-icon-plus">
+  <button class
+ ="btn create-btn" type="submit">
+    <i class="fa-solid fa-plus fa-2x sub"></i>
+    </button> 
+  </div>
+</div>
+
+ </form>
+ 
+ <script>
+function submit(){
+  var x = document.querySelector(".sub").submit();
+}
+
+ </script>
+ </section>
+
+
+<%- include("partials/foot") -%>
