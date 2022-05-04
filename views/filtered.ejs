@@ -1,0 +1,61 @@
+<%- include("partials/header") -%>
+
+
+
+
+<section  >
+    <div class="container">
+     <div class="row">
+       <div class="new-arrival col-8">
+         <h1 class="tooltip-h1 left-h1">New Arrival 
+      <span class="tooltip-txt"></span>
+        </h1>
+       </div>
+     
+     
+      <div class="row phone-row">
+             <% filteredItem.map((item,index) => { %>
+               <div class="col-lg-3 col-sm-4 col-6 card-pricing cards"  >
+                 <div class="card" >
+                     <div class="overlay">
+                       <i class="fa-solid fa-basket-shopping" onclick="addToCart('<%= index %>')" title="add to cart" class="header-img"></i>
+                       <% {console.log(index)} %>
+                     </div>
+                        <a href="/phone/8"><img class="" src="../images/<%=item.imgName%>.jpg" width="100%" alt="img"></a>
+                   </div>
+                   <div class="pricing">
+                     <h1>lorem ipsum</h1>
+                     <span>&dollar;190.00</span>
+                     <br>
+                     <i class="far fa-star star"></i>
+                     <i class="far fa-star star"></i>
+                     <i class="far fa-star star"></i>
+                     <i class="far fa-star star"></i>
+                    </div>
+                 </div>
+                 
+               
+             
+           <% }) %> 
+           
+           
+   
+      </div>
+      </div>
+   
+   
+   
+   
+   
+   
+   
+   
+    </div>
+   
+    </section>
+   
+
+
+
+
+<%- include("partials/footer") -%>
