@@ -1,0 +1,84 @@
+  
+ <%- include("partials") %>
+ <body  >
+   
+ 
+ 
+<div id="mySidebar" class="sidebar">
+ 
+        <% if (imgpath) { %>
+           <div class="img-box">   <img src="../images/<%=imgpath%>" width="100%" height="auto"   alt="not found">
+          <p><%= currentuserName %></p>
+          </div>
+    
+        <% } %>
+         
+         
+ 
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <!-- <div class="links"> -->
+        <a href="/login"><i class="icon fa-solid fa-user"></i>Login</a>
+        <a href="/post"><i class="icon fa-solid fa-circle-plus"></i>post</a>  
+        <a href="/register"><i class="icon fa-solid fa-user-plus"></i></i>Register</a>
+        <a href="/home"><i class="icon fa-solid fa-home"></i></i>Home</a>
+     
+     <!-- </div> -->
+  </div>
+  
+  
+  <div class="addpost-btn">
+    <button class="openbtn" onclick="openNav()">☰</button>  
+  </div>
+
+
+<% if (postToUpdate) { %>
+    <!-- <div class="up-post-img"> <img src="../images/<%= postToUpdate.authorImg %> " alt=""></div>
+  -->
+    <form class="addpost up-post" action="/updatepost" method="post">
+        <input type="hidden" name="postId" id="" value="<%= postToUpdate._id%>">
+
+         <span>title</span>
+        <input type="text" name="title" value="<%= postToUpdate.title %>">
+        <br>
+        <span>
+        content
+        </span>
+        <textarea name="content" id="" value="<%=postToUpdate.content%>"  cols="30" rows="10"></textarea>
+        <br>
+        <span>image</span> <br>
+         <div class="update-image">
+            <div class="previous up-img-prev">
+                <span>
+                    previous
+                    </span>
+                <img src="../images/<%=postToUpdate.postImg %>" alt=""> <br>
+            </div>
+           <div class="new">
+            <span>
+                new
+                </span>
+                <input type="file" name="profileImage" id="newfile"  > <br>
+              
+           </div>
+         </div>
+        <button type="submit">update</button>
+    </form>
+    <% } %> 
+
+    <script>
+        function openNav() {
+          if (window.innerWidth <= 600) {
+
+document.getElementById("mySidebar").style.width = "100%";
+ } else {
+  document.getElementById("mySidebar").style.width = "20%";
+ }
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidebar").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+        }
+    
+    
+        </script>

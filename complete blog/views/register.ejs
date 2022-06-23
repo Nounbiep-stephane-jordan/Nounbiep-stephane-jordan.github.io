@@ -1,0 +1,102 @@
+ 
+ <%- include("partials") %>
+  <% if (message) { %>
+    <div class="error"><%= message %></div>
+ <% } %>
+ 
+<form class="register" action="register"  method="post" encType="multipart/form-data"  >
+ 
+   <span>nickname </span>
+  <input class="input"  type="text" name="nickname"  placeholder="enter a nickname"  required/> <br />
+    <span>password</span>
+  <input class="input"type="password" name="password"  placeholder="enter a password" required/> <br />  
+    <span>profile</span>
+  <input  class="file" type="file" name="profileImage" id="" placeholder="profile" required>  <br>      
+  <button type="submit" class="btn success">Register</button>
+  <div class="info"> Already part of us? <a href="/login"> Login</a></div>
+
+    
+</form>
+
+<style>
+ /* @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
+ 
+ 
+ 
+
+.register{
+  font-family: 'Titillium Web', sans-serif;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    margin-top: 50px;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    width: 20%;
+   margin: 80px auto;
+    background-image: linear-gradient(-80deg ,rgb(113, 113, 184),rgb(75, 253, 113));
+    box-shadow: 0px 0px 10px greenyellow;
+ 
+}
+
+ 
+  .register span{
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: white;
+}
+
+ .input  {
+  padding: 15px;
+ 
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  width: 100%;
+}
+
+.file{
+  padding-bottom: 22px;
+}
+ 
+ 
+.btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Green */
+/* .success {
+  border-color: #4c53af;
+  color: rgb(38, 0, 128);
+}
+
+.success:hover {
+  background-color: #6a4caf;
+  color: rgb(255, 255, 255);
+} */
+
+
+/* .info{
+    font-size: 0.8rem;
+    color: white;
+    margin: 20px;
+}  
+
+.error{
+  text-align: center;
+  background-color:  rgb(243 97 97);
+  box-shadow: 0 0 5px  rgb(165 16 38);
+  color: white;
+  padding: 20px;
+  width: 20%;
+  margin: auto;
+}  */
+
+</style>

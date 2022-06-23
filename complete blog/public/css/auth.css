@@ -1,0 +1,239 @@
+@media screen and (max-width: 600px) {
+    html{
+  font-family: 'Titillium Web', sans-serif;
+   
+    }
+    .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        flex-direction: column;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        }
+        
+        .img-box img{
+        border-radius: 50%;
+        width: 20%;
+        margin: auto;
+        }
+        
+        .img-box{
+        margin-left: 3rem;
+        }
+        
+        .img-box p{
+        color: white;
+        font-size: 20px;
+        
+        }
+        
+        
+        .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 15px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        margin: 20px;
+        align-items: center;
+        }
+        
+        .sidebar a:hover {
+        color: #f1f1f1;
+        }
+        
+        .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 20px;
+        }
+        
+        .openbtn {
+        font-size: 20px;
+   position: absolute;
+        z-index: 5;
+        cursor: pointer;
+        background-color: #111;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        top: -20px;
+        }
+        
+  .text{
+      margin: 20px;
+  }
+
+        .openbtn:hover {
+        background-color: #444;
+        }
+        
+        #main {
+        transition: margin-left .5s;
+        padding: 8px;
+        }
+
+       .sidebar i{
+           margin-right: 20px;
+       }
+
+       img {
+           width: 100%;
+           height: auto;
+       }
+
+   .right form{
+       margin-left: 10px;
+   }
+
+       .post{
+        background-color:  white;
+    
+   padding: 12px;
+      position: relative;
+        width: 80%;
+        margin:20px auto;
+    animation: slide 2s forwards linear;
+    transition: all 0.5s;
+    box-shadow: 0px 0px 15px gray;
+    opacity: 0;
+    }
+    
+    @keyframes slide {
+        0%{margin-top: -500px;opacity: 0;}
+        100%{margin-top: 20px;opacity: 1;}
+    }
+
+   .post .author img{
+       width: 15%;
+   }
+
+   .post-body{
+       display: flex;
+       flex-direction: column;
+   }
+
+   .post .img-post{
+       width: 100%;
+   }
+
+   .changes {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0px 30px 0px;
+  
+}
+
+ .com p{
+     margin-left: 30px;
+     font-size: 12px;
+ }
+
+ .read-more:hover .line{
+    animation-name: example;
+    width: 0;
+    height: 2px;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+.title{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+ 
+  
+  @keyframes example {
+    0%   {background-color: rgb(104, 104, 248);width:0;}
+    100%  {background-color:blue;width:18%;}
+  }
+
+
+  .register{
+    font-family: 'Titillium Web', sans-serif;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    height: 450px;
+    margin-top: 50px;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    width: 80% ;
+    margin: 80px auto;
+    background-image: linear-gradient(-80deg ,rgb(113, 113, 184),rgb(75, 253, 113));
+    box-shadow: 0px 0px 10px greenyellow;
+  }
+
+  .register input{
+      width: 80%;
+  }
+
+  .register input[type="file"] {
+      margin-top: -10px;
+  }
+
+  .btn {
+   border: none;}
+
+   input[type=text], input[type=password] {
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    width: auto;
+}
+
+.up-post{
+    width: 300px;
+}
+
+.s-author-image {
+    width: 18%;
+}
+.s-title {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: capitalize;
+}
+
+.s-content p{
+    font-size: 12px;
+    padding: 20px;
+}
+.s-image img {
+     margin-left: 20px;
+}
+
+.error{
+    position: absolute;
+    width: 80%;
+    top: 5px;
+}
+
+.update-image{
+    display: block;
+}
+
+
+}
+
+
+
+
+ 

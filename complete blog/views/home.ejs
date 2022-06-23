@@ -1,0 +1,234 @@
+ 
+ <%- include("partials") %>
+ <body onload="disappear()">
+   
+ 
+ <div class="notification">
+  <p  >
+   <% if (message) { %>
+      <%= message %> 
+   <%} %>
+  </p>
+ </div>
+<div id="mySidebar" class="sidebar">
+ 
+        <% if (imgpath) { %>
+           <div class="img-box">   <img src="../images/<%=imgpath%>" width="100%" height="auto"   alt="not found">
+          <p class="current"><%= currentuserName %></p>
+          </div>
+    
+        <% } %>
+         
+         
+ 
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <!-- <div class="links"> -->
+        <a href="/login"><i class="icon fa-solid fa-user"></i>Login</a>
+        <a href="/post"><i class="icon fa-solid fa-circle-plus"></i>post</a>  
+        <a href="/register"><i class="icon fa-solid fa-user-plus"></i></i>Register</a>
+        <a href="/home"><i class="icon fa-solid fa-home"></i></i>Home</a>
+     
+     <!-- </div> -->
+  </div>
+  
+  
+  <div >
+    <button class="openbtn" onclick="openNav()">☰</button>  
+  </div>
+  <div class="container">
+    
+  <% if (allpost !== []) { %> 
+    <% allpost.map((post) =>{ %>
+        <div class="post">
+         <div>
+            <div class="author">
+             <img src="../images/<%= post.authorImg %>" alt="author image">
+             <span class="author-name"><%= post.authorName %></span >
+            </div>
+            <div class="time">
+              <p><%= post.time %></p>
+            </div>
+         </div>
+    <hr>
+          <div class="post-body">
+            <div class="img-post"><img src="../images/<%= post.postImg %>" alt="post image"></div> 
+           <div class="text">
+            <h1 class="title"><%= post.title %></h1>
+            <div class="content"> <p><%= post.content.slice(0,100) %></p>
+            <a class="read-more" href="/singlepost/<%= post._id  %> ">read more
+              <div class="line"></div>
+            </a>
+             <div class="changes">
+              <div class="small">
+                <i class="icon fa-regular fa-comment" id="<%= post._id %>">
+                </i>
+                  <div class="right" id="<%= post._id  %>">
+                    <!-- <input type="hidden" form="comment-form" name="postId" value="<%= post._id  %>"> -->
+                    <!-- <form action="/comment" method="post">
+                      <textarea name="comment" id="" cols="30" rows="10"></textarea>
+                      <button type="submit" class=" btn comment-btn">comment</button>
+                    </form> -->
+                  </div>
+              </div>
+                 
+                <i class="like icon fa-solid fa-heart"   ></i> 
+           <% if (currentuser == post.authorId) {%>
+               <a  href="/updatepost/<%= post._id %>">
+                <i class="icon fa-regular fa-pen-to-square"></i>
+              </a> 
+              <% }else { %>  
+                
+                  <i class="icon fa-regular fa-pen-to-square"></i>
+                <%}%>
+             </div>
+             <div class="com">
+              
+              <%   if (post.comments !== []) { %> 
+                <!-- <h1>Comments</h1> -->
+                 <% for (let i=0; i<post.comments.length;i++) { %>
+                 <p><%= post.comments[i] %> </p>
+                 <% } %> 
+              <% } %> 
+              
+                  </div>
+            </div> 
+           </div>   
+          
+          </div>
+           
+           <% if (currentuser == post.authorId) {%>
+               <div class="change">
+                <form action="/deletepost" method="post">
+                  <input type="hidden" name="postId" value="<%= post._id %>">
+                 
+                  <button type="submit" class="delete"><i class="icon fa-solid fa-trash-can"></i></button>
+              </form>
+                
+               </div>
+              <% } %>  
+        </div> 
+      
+    <% }) %>  
+    <% } %>  
+   
+    <section class="pagination">
+      <% if(currentPage !== 1) { %>
+        <a href="/home?page=1">1</a>
+        <% } %>  
+
+      <a href="/home?page=<%= currentPage %>" class="active"><%= currentPage %></a>
+
+  
+    <% if(hasNextPage){ %>
+      <a href="/home?page=<%= nextPage %>" ><%= nextPage %></a>
+      <% }%> 
+
+        <% if(lastPage !== currentPage && nextPage !== lastPage) {  %> 
+      <a href="/home?page=<%= lastPage %>" ><%= lastPage %></a>
+      <% } %> 
+
+
+
+    </section>
+  </div>
+ 
+
+ <style>
+ 
+ </style>
+
+<script>
+    function openNav() {
+       if (window.innerWidth <= 600) {
+
+      document.getElementById("mySidebar").style.width = "100%";
+       } else {
+        document.getElementById("mySidebar").style.width = "20%";
+       }
+       
+    //   document.getElementById("main").style.marginLeft = "100px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+
+    function disappear() {
+      setTimeout(()=>{
+        document.querySelector(".notification").style.display="none"
+        console.log('in function')
+      },3000)
+    }
+
+  
+      document.querySelectorAll(".like").forEach((like)=>{
+        like.addEventListener("click",()=>{
+         like = event.target
+         id = event.target.id
+        
+
+       if (like.classList.contains("isliked")) {
+        console.log("fetching",id)
+        //  fetch(`/like/${id}`,{mode:"cors"}).
+        //  then(res =>{
+        //    console.log(res)
+        //  })
+        //  .catch(err =>{
+        //    console.log(err)
+        //  })
+        //  console.log("fetching finished")
+        //  console.log(event.target)
+
+        like = event.target.classList.remove("isliked")
+       } else {
+       return like = event.target.classList.add("isliked")
+       }
+      })
+     
+      })
+    
+      document.querySelectorAll(".fa-comment").forEach((comment) =>{
+        comment.addEventListener("click",()=>{
+          let id =event.target.id.toString()
+         let boxcomment = document.getElementById(`${id}`);
+         
+           console.log(boxcomment,event.target.nextElementSibling)
+           if (!event.target.classList.contains("done")) {
+            let  form = document.createElement("form");
+           form.setAttribute("action","/comment")
+           form.setAttribute("method","post")
+         
+            let hidden = document.createElement("input")
+          hidden.setAttribute("type","hidden")
+          hidden.setAttribute("name","postId")
+          hidden.setAttribute("value",`${id}`)
+         let text = document.createElement("textarea")
+         text.setAttribute("name","comment")
+         text.setAttribute("cols","30")
+         text.setAttribute("rows","10")
+         if(document.querySelector(".current")){
+          text.innerText = document.querySelector(".current").innerHTML+"@"
+         }
+         let  button = document.createElement("button")
+           button.setAttribute("class","comment-btn")
+           button.setAttribute("class","btn")
+           button.innerHTML="comment"
+           button.classList.add("comment-btn")
+           event.target.nextElementSibling.append(form)
+           form.appendChild(text)
+           form.appendChild(hidden)
+           form.appendChild(button)
+event.target.classList.add("done")
+           }
+          
+       
+         
+        })
+
+      }) 
+    
+    </script>
+</body>
+
+ 

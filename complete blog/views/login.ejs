@@ -1,0 +1,21 @@
+<%- include("partials") %>
+ 
+<% if (message) { %>
+    <div class="error"><%= message %></div>
+ <% } %>
+ 
+<form class="register" action="/login" method="post" encType="multipart/form-data">
+    <span> nickname</span>
+    <input type="text" name="nickname"/> <br />
+     <span>password</span>
+    <input type="password" name="password" /> <br />
+   
+    <button type="submit" class="btn success">Login</button>
+    <div class="info"> D'ont have an account? <a href="/register"> register</a></div>
+</form>
+
+
+<style>
+ 
+ 
+</style>

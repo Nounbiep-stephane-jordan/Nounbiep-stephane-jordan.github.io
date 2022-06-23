@@ -1,0 +1,72 @@
+ <%- include("partials") %>  
+  
+
+
+ 
+ <%- include("partials") %>
+ <body onload="disappear()">
+   
+ 
+ 
+<div id="mySidebar" class="sidebar">
+ 
+    
+         
+ 
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <!-- <div class="links"> -->
+        <a href="/login"><i class="icon fa-solid fa-user"></i>Login</a>
+        <a href="/post"><i class="icon fa-solid fa-circle-plus"></i>post</a>  
+        <a href="/register"><i class="icon fa-solid fa-user-plus"></i></i>Register</a>
+        <a href="/home"><i class="icon fa-solid fa-home"></i></i>Home</a>
+     
+     <!-- </div> -->
+  </div>
+  
+  
+  <div >
+    <button class="openbtn" onclick="openNav()">☰</button>  
+  </div>
+
+
+
+
+  <% if (post) { %> 
+    <div class="post s-post">
+      <div class="s-author-image"><img src="../images/<%= post.authorImg %>" alt="author image"> 
+          <div class="s-author">by <%= post.authorName %></div></div>
+        <div class="s-title"><%= post.title %></div>
+        <div class="s-content"> 
+          <p><%= post.content %></p>
+        </div>
+       
+        <div class="s-image"><img src="../images/<%= post.postImg %>" alt="post image"></div>
+        
+     </div> 
+
+     <% } %> 
+
+
+     <script>
+          function openNav() {
+            if (window.innerWidth <= 600) {
+
+document.getElementById("mySidebar").style.width = "100%";
+ } else {
+  document.getElementById("mySidebar").style.width = "20%";
+ }
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+
+    function disappear() {
+      setTimeout(()=>{
+        document.querySelector(".notification").style.display="none"
+        console.log('in function')
+      },3000)
+    }
+
+     </script>

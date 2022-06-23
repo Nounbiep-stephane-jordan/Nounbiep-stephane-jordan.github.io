@@ -1,0 +1,65 @@
+  
+ <%- include("partials") %>
+ <body  >
+   
+ 
+ 
+<div id="mySidebar" class="sidebar">
+ 
+        <% if (imgpath) { %>
+           <div class="img-box">   <img src="../images/<%=imgpath%>" width="100%" height="auto"   alt="not found">
+          <p><%= currentuserName %></p>
+          </div>
+    
+        <% } %>
+         
+         
+ 
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <!-- <div class="links"> -->
+        <a href="/login"><i class="icon fa-solid fa-user"></i>Login</a>
+        <a href="/post"><i class="icon fa-solid fa-circle-plus"></i>post</a>  
+        <a href="/register"><i class="icon fa-solid fa-user-plus"></i></i>Register</a>
+        <a href="/home"><i class="icon fa-solid fa-home"></i></i>Home</a>
+     
+     <!-- </div> -->
+  </div>
+  
+  
+  <div class="addpost-btn">
+    <button class="openbtn" onclick="openNav()">☰</button>  
+  </div>
+
+  <% message?  message:""%> 
+ <form class="addpost" action="/addpost" method="post" enctype="multipart/form-data">
+     <span>title</span>
+    <input type="text" name="title">
+    <br>
+     <span>content </span>
+    <!-- <input type="text" name="content"> -->
+    <textarea name="content" id="" cols="30" rows="10"></textarea>
+    <br>
+     <span>image</span>
+    <input type="file" name="profileImage" id="">
+    
+    <button type="submit"> post</button>
+    </form>
+
+
+    <script>
+      function openNav() {
+        if (window.innerWidth <= 600) {
+
+document.getElementById("mySidebar").style.width = "100%";
+ } else {
+  document.getElementById("mySidebar").style.width = "20%";
+ }
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+      }
+  
+  
+      </script>
