@@ -1,0 +1,66 @@
+.service span{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.service span:nth-child(2){
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.service-text{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   
+}
+
+.service{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 900px;
+      position: relative;
+
+         /* test */
+   z-index: 1;
+}
+
+
+.service p{
+    color: var(--gray);
+}
+
+
+.service .black{
+    color: var(--black);
+}
+
+ .service-text button{
+    margin-top: 2rem;
+ }
+ 
+
+ @media screen and (max-width:650px) {
+    .service{
+        flex-direction: column;
+        align-items: center;
+        margin: 68vh 0 50vh 0;
+    }
+
+    .service-text span{
+        font-size: 2rem;
+    }
+    .service .all-cards{
+        /* display: flex;
+        flex-direction: column;
+  justify-content: space-between; */
+        position:static;
+    }
+
+    .all-cards .first,.second,.third {
+        position: static !important;
+        margin: 2rem 0;
+    }
+ }

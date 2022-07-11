@@ -1,0 +1,57 @@
+.contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    height: 500px;
+           /* test */
+   z-index: 1;
+}
+
+.contact-text,.form-box{
+    flex: 1;
+}
+
+form,.contact-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-text span{
+    font-size: 2.5rem;
+}
+
+.contact-text span:nth-child(2){
+    color: var(--orange);
+}
+
+
+form input[type],textarea{
+    padding: 20px;
+    border: 2px solid var(--orange);
+    margin: 20px 0;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.form{
+    width: 500px;
+}
+
+.contact .t-blur1{
+    top: 2rem;
+    height: 22rem;
+}
+
+@media screen and (max-width:650px) {
+    .contact{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form{
+        width: fit-content;
+    }
+}

@@ -1,0 +1,34 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../../img/wave.png");
+}
+
+.footer h1{
+    font-size: 18px;
+    color: white;
+}
+
+.images{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer .images svg{
+    transform: scale(2);
+    margin: 20px;
+}
+
+.foot-text {
+    margin-top: 5rem;
+}
+
+.footer .images {
+margin-top: 2rem;
+}
+

@@ -1,0 +1,102 @@
+.service .all-cards{
+    position: relative;
+    text-align: center; 
+    flex: 1;
+}
+
+.service-card{
+    border: 7px solid var(--orangeCard);
+    border-radius: 20px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background:rgba(225,255,255,0.26); */
+    background: rgba(255,255,255,0.26);
+    box-shadow: var(--boxShadow);
+    padding:35px 30px;
+    height: 16rem;
+}
+
+.service img{
+    width: 100%;
+    height: auto;
+}
+
+
+.service-img{
+    width: 70px;
+}
+
+
+.all-cards button{
+    border: none;
+    border-radius: 7px;
+    box-shadow: 0px 19px 60px rgba(0,0,0,0.08);
+    padding: 10px ;
+    color: #5290FD;
+    background-color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.all-cards p:nth-child(2) {
+    font-size: 18px;
+}
+
+.first{
+    position: absolute;
+    left: 18rem;
+    transition: all 0.6s;
+}
+
+@keyframes slidecard1 {
+    0%{left: 18rem;}
+    100%{left: 14rem;}
+}
+ 
+
+
+
+ 
+
+.second {
+    position:absolute;
+    top: 11rem;
+    /* right: 22rem; */
+    right: 25rem;
+    transition: all 0.6s;
+}
+
+@keyframes slidecard2 {
+    0%{right: 25rem;}
+    100%{right: 18rem;}
+}
+ 
+
+
+
+.third{
+    position: absolute;
+    top: 18rem;
+    left: 18rem;
+    transition: all 0.6s;
+    /* animation: slidecard 3s ease 2s; */
+}
+
+@keyframes slidecard3 {
+    0%{left: 20rem;}
+    100%{left: 14rem;}
+}
+
+
+.s-blur{
+    left: -15rem;
+    top: 12rem;
+}
+
+.p-blur{
+    top: 10rem;
+  left: 50rem;
+}
