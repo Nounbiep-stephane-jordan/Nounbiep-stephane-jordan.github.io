@@ -1,0 +1,105 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+   
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links ul {
+    display: flex;
+    flex: 1;
+}
+
+.links ul li{
+    list-style-type: none;
+    padding: 10px 10px;
+    margin: 0 20px;
+    color: white;
+    cursor: pointer;
+    transition:0.5s ease;
+}
+
+.links ul li:hover{
+    border-radius: 8px;
+    border: 2px solid #232A4E;
+    background-color: white;
+    color:  #232A4E;
+}
+
+.registration {
+    display: flex;
+    align-items: center;
+}
+
+
+.registration button{
+border: none;
+padding:10px 25px;
+margin:  0 15px;
+border-radius: 8px;
+border: 2px solid #232A4E;
+background-color: transparent;
+color: white;
+letter-spacing: 0.04em;
+transition: 0.5s ease;
+}
+
+.registration button:hover{
+  background-color:  #232A4E;
+}
+
+
+.registration button:nth-child(2) {
+  background-color:  #232A4E;
+}
+
+.registration button:nth-child(2):hover{
+    background-color: transparent;
+}
+.small-size-nav{
+    font-size: 50px;
+    color: white;
+    margin:20px
+}
+
+@media  screen and (max-width:600px) {
+
+    .small-size-nav{
+        font-size: 50px;
+        color: white;
+        margin:20px
+    }
+
+    .links ul{
+        position: relative;
+        /* right: 300px; */
+    }
+
+    nav{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+
+    .animated{
+        animation : side 2s forwards
+    }
+    
+    @keyframes side {
+        0%{right: 300px; position: relative;}
+        100%{right: 0px; position: relative;}
+    }
+
+    .imgContainer{
+        margin: 20px;
+    }
+}

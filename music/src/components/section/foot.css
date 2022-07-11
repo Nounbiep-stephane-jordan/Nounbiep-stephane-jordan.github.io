@@ -1,0 +1,91 @@
+.foot {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  background-color: #162133;
+
+  
+}
+
+.foot{
+    background-image: url("../../img/Rectangle\ 7.png");
+height: 500px;
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+width: 100%;
+z-index: -8;
+}
+
+.link ul li{
+    list-style-type: none;
+    padding: 10px 10px;
+    margin: 0 20px;
+    color: white;
+    cursor: pointer;
+    transition:0.5s ease;
+}
+
+.foot ul{
+    display: flex;
+    justify-content: center;
+}
+
+.icons{
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    text-align: center;
+    margin: 20px auto;
+    width: 35%;
+}
+
+.icon {
+    border: 3px solid white;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 20px;
+    margin: 0 20px;
+    color: white;
+    font-weight: bold;
+    transition: all 0.6s;
+  
+}
+
+.foot-para p{
+    color: rgba(255, 255, 255,0.5);
+}
+
+.icon:hover {
+    transform: scale(2);
+}
+
+@media screen and (max-width:600px) {
+    .foot{
+    height: 300px; 
+    position: relative;
+    top: 20px;   
+    }
+
+    .foot ul {
+        align-items: center;
+    }
+
+    .foot ul li{
+        font-size: 10px;
+    }
+
+    .icons{
+        display: block;
+    }
+
+    .icon {
+        margin: 5px;
+    }
+
+    .foot p{
+        padding: 0 20px;
+        font-size: 0.8rem;
+    }
+}

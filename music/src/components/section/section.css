@@ -1,0 +1,192 @@
+ 
+
+
+.first h1{
+    font-weight: bold;
+    color: white;
+    font-size: 4rem;
+    line-height: 0;
+}
+
+.first h2{
+    font-size: 2rem;
+    color:   rgb(255, 255, 255,0.5);
+    line-height: 1;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 500px;
+}
+
+p{
+   color:  #232A4E;
+    line-height: 1.5;
+}
+
+  .store p{
+    color: white;
+ }
+
+ .store .img2 {
+    margin-right: 20px;
+ }
+
+
+.phone {
+ 
+    background-image: url("../../img//backgraphics.png");
+    height: 500px;
+    background-size: contain;
+    background-position: 150px 65px;
+    background-repeat: no-repeat;
+    width: 100%;
+    animation: bg 2s 2s forwards;
+    transition: all 0.5s;
+   
+}
+
+@keyframes bg {
+   0%{  background-position: 150px 65px;}
+   100%{    background-position: 200px 80px;}
+ }
+
+.first{
+    padding: 0 0 140px 80px;
+}
+
+ .phone-img{
+    width: 100%;
+    height: auto;
+ }
+
+ /* .graphic{
+    background-image: url("../../img//backgraphics.png");
+    height: 100px;
+    background-size: cover;
+    width: 100%;
+ } */
+
+ .phone-img-box{
+    height: 50px;
+    width: 269px;
+    margin-left: 45%;
+    position: relative;
+ }
+
+ .play{
+    position: absolute;
+    top: 335px;
+    right: 0px;
+    width: 70%;
+    animation: slideplay 2s 2s forwards;
+    transition: all 0.5s;
+ }
+
+ @keyframes slideplay {
+   0%{position: absolute;right: 0px;top:335px;}
+   100%{position: absolute;right: 58px;top:335px;}
+ }
+
+ .play img ,.box-heart img{
+    width: 100%;
+    height: auto;
+ }
+
+ .box-heart{
+    position: absolute;
+ top: 415px;
+ left: -35px;
+width: 40%;
+}
+
+.heart{
+    position: absolute;
+    bottom:-7px;
+    right: 50px;
+    width: 100%;
+    animation: heart 2s 2s forwards;
+    transition: all 0.5s;
+}
+
+@keyframes heart {
+   0%{ right: 50px;}
+   100%{right: 25px;}
+ }
+
+.heart img{
+    width: 120%;
+}
+
+ 
+@media  screen and (max-width:650px) {
+
+ .feature-box{
+   width: 3%;
+ }
+
+ .individual-feature p {
+   color: #707070;
+}
+
+   .left{
+      justify-content: center;
+   }
+   .links ul{
+      flex-direction: column;
+   }
+
+   .first{
+      flex-direction: column;
+      padding: 0 20px;
+   }
+   .first h2{
+      font-size: 1rem;
+   }
+   .first h1{
+      font-size: 1.5rem;
+      line-height: 1;
+   }
+
+   .first p{
+      font-size: 0.6rem;
+      color: gray;
+   }
+
+    .store{
+      display: flex;
+ align-items: center;
+ justify-content: space-evenly;
+    }
+
+   .store img {
+      width: 20%;
+      margin: 20px 0;
+   }
+
+   .phone-img-box {
+      margin: 0;
+       width: 200px;
+   }
+
+   .bg {
+     
+      height: 800px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border-radius:  0 0 80px 80px;
+      width: 100%;
+      z-index: -1;
+       
+      }
+
+      .phone,.right{
+         display: none;
+     }
+ 
+
+ 
+}

@@ -1,0 +1,59 @@
+.download{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height:550px;
+    position: relative;
+    top: 50px;
+    border-radius:  0 0 80px 80px;
+    z-index: 5;
+  background-color: #162133;
+
+}
+
+.download .line-box{
+    width:8%;
+}
+
+.download .line-box img{
+    width: 100%;
+    height: auto;
+}
+
+.download h1{
+    color: white;
+    line-height: 0;
+}
+
+.download .store{
+    margin-top: 50px;
+}
+
+.download p{
+     width: 50%;
+     text-align: center;
+}
+
+@media screen and (max-width:650px) {
+    .download h1{
+        font-size: 1rem;
+    }
+
+    .download .line-box{
+        width: 10%;
+    }
+
+    .download p{
+        width: 100%;
+        width: 80%;
+    }
+
+    .download .store{
+        margin-top: 10px;
+    }
+
+    .download{
+        height: 300px;
+    }
+}

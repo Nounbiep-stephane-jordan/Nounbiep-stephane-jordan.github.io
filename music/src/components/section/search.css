@@ -1,0 +1,245 @@
+.third{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.third img{
+    width: 100%;
+    height: auto;
+}
+
+.third {
+    background-image: url("../../img/Rectangle\ 7.png");
+height: 700px;
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+border-radius:  0 0 80px 80px;
+width: 100%;
+z-index: 5;
+}
+
+ .third-phone {
+    width: 269px;
+ position: relative;
+ bottom: 190px;
+ left: 90px;
+}
+
+
+
+.left-third{
+    flex: 1;
+    position: relative;
+    background-image: url("../../img//backgraphics.png");
+    height: 500px;
+    background-size: contain;
+    background-position: -150px 2px;
+    background-repeat: no-repeat;
+    width: 100%;
+    transition: all 0.5s;
+    top: 12rem;
+    animation: torightback 3s 2s  forwards;
+}
+
+@keyframes torightback {
+    0%{background-position: -150px 2px;}
+    100%{background-position: -100px 2px;}
+}
+ 
+
+.search-input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-input input {
+    border: 1px solid  #020917;
+    padding: 20px;
+    background-color: #020917;
+    border-radius: 10px;
+    flex: 1;
+}
+
+.search-input button {
+width: 5%;
+background-image:linear-gradient(60deg,#E600FF,rgb(253, 0, 0));
+border-radius: 10px;
+margin-left: 10px;
+box-sizing: content-box;
+}
+
+.search-input button div{
+    padding: 27px 28px;
+    border: none;
+background-image: url("../../img/search.png");
+ background-position: 4px ;
+background-size: 50%;
+background-repeat: no-repeat;
+}
+
+.third .right-third h2{
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 0.5;
+    color: rgba(255, 255, 255, 0.685);
+}
+
+.third .right-third h1{
+    color: white;
+    line-height: 0;
+}
+
+ 
+ 
+.right-third .line-box {
+    line-height: normal;
+    width: 8%;
+    margin-top: 20px;
+}
+ 
+
+.girl{
+    width: 160px;
+    position: absolute;
+    z-index: 1;
+    top: -80px;
+    left: 115px;
+}
+
+ .singer{
+    position: absolute;
+    z-index: 1;
+    width: 145px;
+    /* right: 120px; */
+    right: 258px;
+    top: -70px;
+    animation: toright 3s 2s forwards;
+    transition: all 0.5s;
+ }
+
+ @keyframes toright {
+    0%{right: 258px;}
+    100%{right: 225px;}
+ }
+
+ .play-third{
+    position: absolute;
+    z-index: 1;
+    width: 270px;
+    top: 222px;
+ right: 290px;
+ animation: torightplay 3s 2s forwards;
+ transition: all 0.5s;
+    /* transform: rotate(-3deg); */
+ }
+
+ @keyframes torightplay {
+    0%{right: 290px;}
+    100%{right: 369px;}
+ }
+
+ .right-third{
+   flex: 1;
+   padding: 0 3rem 0 6rem;
+  
+ }
+
+
+.right-third *{
+    z-index: unset;
+}
+
+ .text-img{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+ }
+
+ .moon{
+    width: 50px;
+ }
+
+ .moon img{
+    border-radius: 50%;
+    border: 5px solid white;     
+ }
+ .text-img h1{
+    font-size: 0.8rem;
+ }
+
+ .text-img-text{
+    margin-left: 20px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+ }
+
+ .text-img-text p{
+    color: #484e6b;
+   
+ line-height: 0.04em;
+ }
+
+ .text-img-text h1{
+    font-size: 1rem;
+ }
+ 
+ 
+ .search-img{
+    background-color: #232A4E;
+    border-radius: 20px;
+    border: 4px solid black;
+    color: #484e6b;
+ }
+
+ 
+ 
+
+ .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+        padding: 0 30px 5px 30px;
+ }
+
+ .flex-forward{
+    width: 20px;
+ }
+
+ .playing{
+    width: 200px;
+ }
+
+ 
+ .rotate {
+    transform: rotateY(180deg);
+ }
+
+ .control{
+     background-image: url("../../img/small.png");
+     height: 50px;
+     background-position: 120px 100px;
+     background-size: 100%;
+     width: 120px;
+     transform: rotate(2deg);
+ }
+
+ @media screen and (max-width:650px) {
+   .left-third{
+      display: none;
+   }
+   
+ 
+
+  .right-third{
+   padding: 0 6rem;
+  }
+
+  .search-input button div{
+   background-position: 1px;
+  }
+ }
